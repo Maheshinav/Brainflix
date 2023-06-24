@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url();
+  font-style: normal;
+  font-weight: 700;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.header__container {
+  width: 90%;
+}
+.header__logo-container {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+.header__search-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__search-input {
+  width: 24rem;
+  height: 3.2rem;
+  border: 2px solid #E1E1E1;
+  background-color: #FAFAFA;
+  border-radius: 7px;
+  padding: 9px 4px 9px 40px;
+  background-image: url(../../assets/images/search.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: 1.5rem;
+}
+.header__search-input::-moz-placeholder {
+  color: #323232;
+}
+.header__search-input::placeholder {
+  color: #323232;
+}
+.header__avatar {
+  background-image: url(../../assets/images/Mohan-muruge.jpg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
+  height: 3rem;
+  width: 3rem;
+}
+.header__button {
+  background-image: url("../../assets/images/upload.svg");
+  background-color: #0095FF;
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: 2rem;
+  width: 28rem;
+  height: 3.6rem;
+  margin: 0.5rem 1rem 0 0;
+  border-radius: 0.25rem;
+  border-style: none;
+}/*# sourceMappingURL=nav.css.map */
