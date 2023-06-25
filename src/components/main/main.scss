@@ -4,42 +4,137 @@
 .main {
   &__video-player {
     width: 100%;
+    padding-top: 1rem;
+  }
+  &__video-heading {
+    @include fontBold;
+    line-height: 2.3rem;
+    font-size: 2rem;
+    padding: 1rem 2rem 1.5rem 2rem;
+    color: $secondary-black;
   }
   &__video-details {
     display: flex;
+    padding-bottom:1rem;
     justify-content: space-around;
+    align-items: center;
   }
   &__views-icon {
     height: 1rem;
-    width: 1rem;
+    width: 1.5rem;
+    padding-right: 0.5rem;
+    margin: 0;
   }
+  &__video-stats {
+    @include fontRegular;
+    color:$primary-silver;
+  }
+
+  &__video-date-align{
+    padding-top: 1rem;
+  }
+  &__video-channel{
+    @include fontBold;
+    color:$primary-black;
+
+  }
+
   &__likes-icon {
-    height: 1rem;
-    width: 1rem;
+    height: 1.2rem;
+    width: 1.5rem;
+    padding-right: 0.5rem;
   }
   &__icon {
     display: flex;
     align-items: center;
   }
-  &__display-photo {
+  &__comment-secton{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &__display-empty-photo {
     width: 20%;
-    background-image: url(../../assets/images/Mohan-muruge.jpg);
-    background-color: transparent;
+    background-color: $secondary-mercury;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 2rem;
     height: 3rem;
     width: 3rem;
   }
+  &__loaded-comment-wrap{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $secondary-mercury;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__display-photo {
+    width: 20%;
+    background-image: url(../../assets/images/Mohan-muruge.jpg);
+    background-color: $secondary-mercury;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  &__comment-heading {
+    @include fontBold;
+    color: $primary-silver;
+    font-size: 0.8125 rem;
+    line-height: 1.125rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  &__comment-subheading{
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+  &__comment-new{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $secondary-mercury;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__comment-name{
+    @include fontBold;
+    color: $secondary-black;
+  }
 
   &__comment-text-area {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid $primary-silver;
-    border-radius: 4px;
+    width:100%;
+    box-sizing: border-box;
+    height: 9.375rem;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border: 0.1rem solid $secondary-mercury;
+    background-color: $secondary-alabaster;
+    border-radius: 0.25rem;
     resize: vertical;
+
+
+
+    &::placeholder {
+      @include fontRegular;
+      color: $secondary-black;
+      font-size: 0.9rem;
+    }
+    &:focus {
+      outline-color: $primary-blue;
+    }
+  }
+  &__comment-context{
+    width: 85%;
+  }
+
+  &__comment-wrap{
+    width:85%;
+  }
+  &__name-date-wrap{
+    display:flex;
+    justify-content: space-between
   }
 
   &__button {
@@ -48,7 +143,25 @@
     background-color: $primary-blue;
     background-repeat: no-repeat;
     background-position: 1rem center;
+    border-width: 0;
+    border-radius: 0.25rem;
     height: 3rem;
     width: 100%;
   }
-}
+  &__button-text {
+    @include fontBold;
+    font-size: 1rem;
+    color: $primary-white;
+  }
+
+  &__video-description{
+    padding:0rem 2rem 1rem 2rem;
+    @include fontRegular;
+    color:$secondary-black;
+    line-height: 1.4rem;
+    font-size: 0.99rem;
+
+  }
+
+ 
+};

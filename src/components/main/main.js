@@ -14,54 +14,58 @@ const Main = (props) => {
                     <source src={firstVideoData.video} type="video/mp4" />
                 </video>
                 <div>
-                    <h1>{firstVideoData.title}</h1>
+                    <h1 className="main__video-heading">{firstVideoData.title}</h1>
                 </div>
                 <div className="main__video-details">
                     <div>
-                        <p>{firstVideoData.channel}</p>
-                        <p>{firstVideoData.timestamp}</p>
+                        <p className="main__video-channel">By {firstVideoData.channel}</p>
+                        <p className="main__video-stats main__video-date-align">{new Date(firstVideoData.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
                     </div>
                     <div>
                         <div className="main__icon">
                             <img src={view_icon} className="main__views-icon" alt="views-icon" />
-                            <p className="main__views">{firstVideoData.views}</p>
+                            <p className="main__video-stats">{firstVideoData.views}</p>
                         </div>
                         <div className="main__icon">
                             <img src={like_icon} className="main__likes-icon" alt="likes-icon" />
-                            <p className="main__likes">{firstVideoData.likes}</p>
+                            <p className="main__video-stats">{firstVideoData.likes}</p>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <p>{firstVideoData.description}</p>
+                    <p className="main__video-description">{firstVideoData.description}</p>
                 </div>
                 <div>
-                    <h3>{firstVideoData.comments.length} Comments</h3>
+                    <h3 className="main__comment-subheading">{firstVideoData.comments.length} Comments</h3>
                 </div>
-                <div>
-                    <div>
-                        <div className="main__display-photo"></div>
+                <div className="main__comment-secton">
+                <div className="main__comment-new">
+                    <div className="main__display-photo"></div>
+                    <div className="main__comment-context">
                         <div>
-                            <h3>JOIN THE CONVERSATION</h3>
+                            <h3 className="main__comment-heading">Join the converstaion</h3>
                             <textarea className="main__comment-text-area" placeholder="Add a new comment"></textarea>
                         </div>
+
+                        <button className="main__button main__button-text">COMMENT</button>
                     </div>
-                    <button className="main__button">COMMENT</button>
                 </div>
                 {firstVideoData.comments.map((comment) => (
                     <div key={comment.id}>
-                        <div>
-                            <div className="main__display-photo"></div>
-                            <div>
-                                <div>
-                                    <p>{comment.name}</p>
-                                    <p>{new Date(comment.timestamp).toLocaleDateString()}</p>
+                        <div className="main__loaded-comment-wrap">
+                            <div className="main__display-empty-photo "></div>
+                            <div className="main__comment-wrap">
+                                <div className="main__name-date-wrap">
+                                    <p className="main__comment-name">{comment.name}</p>
+                                    <p className="main__video-stats">{new Date(firstVideoData.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
+
                                 </div>
                                 <p>{comment.comment}</p>
                             </div>
                         </div>
                     </div>
                 ))}
+                </div>
             </div>
             <div>
             </div>
