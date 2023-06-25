@@ -17,15 +17,18 @@ const Nav = () => {
                         <img className="header__logo" src={logo} alt="logo -BrainFlix">
                         </img>
                     </div>
-                    <div className="header__search-wrap">
-                        <input
-                            className="header__search-input"
-                            type="search"
-                            placeholder="Search"
-                        />
-                        <div className="header__avatar"></div>
+                    <div className="header__content-tablet">
+                        <div className="header__search-wrap">
+                            <input
+                                className="header__search-input"
+                                type="search"
+                                placeholder="Search"
+                            />
+                            <div className="header__avatar "></div>
+                        </div>
+                        <button className="header__button">upload</button>
+                        <div className="header__avatar-tablet "></div>
                     </div>
-                    <button className="header__button">upload</button>
 
                 </div>
             </div>
