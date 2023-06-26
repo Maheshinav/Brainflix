@@ -1,7 +1,7 @@
 import "./main.css";
 import view_icon from "../../assets/images/views.svg";
 import like_icon from "../../assets/images/likes.svg";
-import videoList from "../../data/videos.json";
+
 
 const Main = (props) => {
     const videoData = props.videoData;
