@@ -1,7 +1,7 @@
 import "./list.css";
 
 const List = (props) => {
-  const videoList = props.vedioList;
+  const videoList = props.videoList;
 
   const imageClick = (videoId) => {
     props.onImageClick(videoId);

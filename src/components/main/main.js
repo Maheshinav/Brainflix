@@ -90,7 +90,7 @@ const Main = (props) => {
                     </div>
 
                     <div className="main__video-list-align">
-                        <List vedioList={videoList} onImageClick={handleImageClick} updateList={handleListUpdate} />
+                        <List videoList={videoList} onImageClick={handleImageClick} updateList={handleListUpdate} />
                     </div>
                 </div>
             </div>
