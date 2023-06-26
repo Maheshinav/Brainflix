@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import view_icon from "../../assets/images/views.svg";
 import like_icon from "../../assets/images/likes.svg";
-import List from "../list/list";
+import List from "../list/List";
 import "./main.css"
 
 const Main = (props) => {
