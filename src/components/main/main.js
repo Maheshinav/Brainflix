@@ -17,11 +17,11 @@ const Main = (props) => {
                     <h1 className="main__video-heading">{firstVideoData.title}</h1>
                 </div>
                 <div className="main__video-details">
-                    <div>
+                    <div className="main__video-details-tablet">
                         <p className="main__video-channel">By {firstVideoData.channel}</p>
                         <p className="main__video-stats main__video-date-align">{new Date(firstVideoData.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
                     </div>
-                    <div>
+                    <div className="main__icon-tablet">
                         <div className="main__icon">
                             <img src={view_icon} className="main__views-icon" alt="views-icon" />
                             <p className="main__video-stats">{firstVideoData.views}</p>
@@ -32,6 +32,7 @@ const Main = (props) => {
                         </div>
                     </div>
                 </div>
+                
                 <div>
                     <p className="main__video-description">{firstVideoData.description}</p>
                 </div>
