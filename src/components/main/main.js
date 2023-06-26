@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import view_icon from "../../assets/images/views.svg";
 import like_icon from "../../assets/images/likes.svg";
-<<<<<<< HEAD
-
-=======
-import List from "../list/List";
-import "./main.css";
->>>>>>> develop
 
 const Main = (props) => {
     const videoData = props.videoData;
