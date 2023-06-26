@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import "../../assets/images/upload.svg";
 import "../../assets/images/search.svg";
