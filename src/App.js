@@ -9,7 +9,8 @@ function App() {
   return (
     <div>
       <Nav />
-      <Main videoData={videoData}/>
+      <Main videoData={videoData} />
+
     </div>
 
   );

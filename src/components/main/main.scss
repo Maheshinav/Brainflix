@@ -15,9 +15,10 @@
     margin-left: 1rem;
     margin-right: 1rem;
     color: $secondary-black;
-    border-bottom:1px solid $secondary-mercury;
-    @include media-tablet{
-        margin-bottom: 0; 
+    border-bottom: 1px solid $secondary-mercury;
+    @include media-tablet {
+      margin-bottom: 0;
+      border-bottom: none;
     }
   }
   &__video-details {
@@ -26,14 +27,13 @@
     padding-left: 1rem;
     align-items: center;
     margin-right: 1rem;
-    margin-left: 1rem,;
-    border-bottom:1px solid $secondary-mercury;
-    @include media-tablet{
-        justify-content: space-between;
-        margin-right: 1rem;
-        margin-left: 1rem,;
-        padding: 0;
-        
+    margin-left: 1rem;
+    border-bottom: 1px solid $secondary-mercury;
+    @include media-tablet {
+      justify-content: space-between;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      padding: 0;
     }
   }
   &__video-details-tablet {
@@ -83,32 +83,33 @@
   &__icon {
     display: flex;
     align-items: center;
-    @include media-tablet{
-        margin-right: 2rem;
-      }
-    
+    @include media-tablet {
+      margin-right: 2rem;
+    }
   }
   &__icon-tablet {
     padding-left: 10rem;
-    @include media-tablet{
-    display: flex;
-    align-items: center;
-    padding: 0;
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
   }
-  }
-  
 
   &__icon-wrap {
     @include media-tablet {
-        display: flex;
-        width: 16rem;
-        justify-content: space-evenly;
-      }
-  
-}
+      display: flex;
+      width: 16rem;
+      justify-content: space-evenly;
+    }
+  }
   &__comment-secton {
     margin-left: 1rem;
     margin-right: 1rem;
+    padding-bottom: 0.3rem;
+    @include media-tablet {
+      font-size: 0.9rem;
+    }
   }
   &__display-empty-photo {
     width: 20%;
@@ -118,6 +119,10 @@
     border-radius: 2rem;
     height: 3rem;
     width: 3rem;
+    @include media-tablet {
+      height: 2rem;
+      width: 2rem;
+    }
   }
   &__loaded-comment-wrap {
     display: flex;
@@ -125,6 +130,10 @@
     border-bottom: 1px solid $secondary-mercury;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    @include media-tablet {
+      justify-content: space-evenly;
+      align-items: stretch;
+    }
   }
   &__display-photo {
     width: 20%;
@@ -135,6 +144,12 @@
     border-radius: 2rem;
     height: 3rem;
     width: 3rem;
+    @include media-tablet {
+      height: 2rem;
+      width: 2rem;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
   }
   &__comment-heading {
     @include fontBold;
@@ -143,10 +158,16 @@
     line-height: 1.125rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
+    @include media-tablet {
+      font-size: 0.7rem;
+    }
   }
   &__comment-subheading {
     padding-bottom: 1rem;
     padding-left: 2rem;
+    @include media-tablet {
+      border-top: none;
+    }
   }
   &__comment-new {
     display: flex;
@@ -156,10 +177,17 @@
     border-bottom: 1px solid $secondary-mercury;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    @include media-tablet {
+      border-top: none;
+    }
   }
   &__comment-name {
     @include fontBold;
     color: $secondary-black;
+    @include media-tablet {
+      line-height: 0;
+      font-size: 0.9rem;
+    }
   }
 
   &__comment-text-area {
@@ -172,11 +200,18 @@
     background-color: $secondary-alabaster;
     border-radius: 0.25rem;
     resize: vertical;
+    @include media-tablet {
+      height: 2rem;
+      width: 28rem;
+    }
 
     &::placeholder {
       @include fontRegular;
       color: $secondary-black;
       font-size: 0.9rem;
+      @include media-tablet {
+        font-size: 0.8rem;
+      }
     }
     &:focus {
       outline-color: $primary-blue;
@@ -184,6 +219,12 @@
   }
   &__comment-context {
     width: 85%;
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+    }
   }
 
   &__comment-wrap {
@@ -204,11 +245,21 @@
     border-radius: 0.25rem;
     height: 3rem;
     width: 100%;
+    @include media-tablet {
+      height: 2rem;
+      width: 10rem;
+      background-size: 1rem;
+      margin-top: 2rem;
+    }
   }
+
   &__button-text {
     @include fontBold;
     font-size: 1rem;
     color: $primary-white;
+    @include media-tablet {
+      font-size: 0.8rem;
+    }
   }
 
   &__video-description {
@@ -217,5 +268,17 @@
     color: $secondary-black;
     line-height: 1.4rem;
     font-size: 0.99rem;
+  }
+  &__video-side-list {
+    @include media-desktop {
+      display: flex;
+    }
+  }
+  &__video-list-align {
+    @include media-desktop{
+      border-left: 1px solid $secondary-mercury;
+
+    }
+    
   }
 }
