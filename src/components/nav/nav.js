@@ -1,10 +1,6 @@
 
 import logo from "../../assets/images/BrainFlix-logo.svg";
-import "../../assets/images/upload.svg";
-import "../../assets/images/search.svg";
 import "./nav.css";
-
-
 
 const Nav = () => {
 
@@ -32,10 +28,7 @@ const Nav = () => {
 
                 </div>
             </div>
-
         </header>
-
-
     )
 
 }
