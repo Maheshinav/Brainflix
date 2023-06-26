@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
+
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import "./nav.css";
-
-
 
 const Nav = () => {
 
@@ -30,10 +28,7 @@ const Nav = () => {
 
                 </div>
             </div>
-
         </header>
-
-
     )
 
 }
