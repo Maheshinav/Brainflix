@@ -329,6 +329,8 @@
     display: flex;
   }
 }
-.main__video-list-align {
-  border-left: 1px solid #e1e1e1;
+@media (min-width: 1280px) {
+  .main__video-list-align {
+    border-left: 1px solid #e1e1e1;
+  }
 }/*# sourceMappingURL=main.css.map */
