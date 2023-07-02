@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import Nav from "./components/nav/nav";
+import Nav from "./components/nav/Nav";
 
 
 // eslint-disable-next-line no-unused-vars
