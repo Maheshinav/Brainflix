@@ -1,5 +1,6 @@
 
 import logo from "../../assets/images/BrainFlix-logo.svg";
+import {Link} from 'react-router-dom';
 import "./nav.css";
 
 const Nav = () => {
@@ -10,8 +11,10 @@ const Nav = () => {
             <div className="header" >
                 <div className="header__container">
                     <div className="header__logo-container">
+                        <Link to="/"> 
                         <img className="header__logo" src={logo} alt="logo -BrainFlix">
                         </img>
+                        </Link>
                     </div>
                     <div className="header__content-tablet">
                         <div className="header__search-wrap">
@@ -22,7 +25,7 @@ const Nav = () => {
                             />
                             <div className="header__avatar "></div>
                         </div>
-                        <button className="header__button">upload</button>
+                        <button className="header__button"><Link className="header__button--link" to= "/upload" >upload</Link></button>
                         <div className="header__avatar-tablet "></div>
                     </div>
 

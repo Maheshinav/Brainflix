@@ -5,6 +5,7 @@ import "./data/videos.json";
 import Nav from "./components/nav/Nav";
 import HomePage from "./pages/home-page/HomePage";
 import VideoDetails from "./pages/video -details/VideoDetails";
+import UploadPage from "./pages/upload-page/UploadPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/video/:id" element={<VideoDetails/>} />
+          <Route path ="/upload" element={<UploadPage/>}/>
         </Routes>
       </div>
     </BrowserRouter>
