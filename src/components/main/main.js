@@ -26,7 +26,8 @@ const Main = (props) => {
     return (
         <div>
             <div key={selectedVideo.id}>
-                <video className="main__video-player" controls>
+                <video className="main__video-player
+                " controls poster ={selectedVideo.image}>
                     <source src={selectedVideo.video} type="video/mp4" />
                 </video>
                 <div className="main__video-side-list">
@@ -81,7 +82,7 @@ const Main = (props) => {
                                                 <p className="main__video-stats">{new Date(comment.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
 
                                             </div>
-                                            <p>{comment.comment}</p>
+                                            <p class="main__comments">{comment.comment}</p>
                                         </div>
                                     </div>
                                 </div>

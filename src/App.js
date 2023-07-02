@@ -3,7 +3,7 @@ import Main from "./components/main/main";
 import videoData from "./data/video-details.json";
 import './data/video-details.json';
 import './data/videos.json';
-import Nav from "./components/nav/nav";
+import Nav from "./components/nav/Nav";
 
 function App() {
   return (

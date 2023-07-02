@@ -14,7 +14,7 @@
     padding: 1rem 1rem 1.5rem 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    color: $secondary-black;
+    color: $primary-black;
     border-bottom: 1px solid $secondary-mercury;
     @include media-tablet {
       margin-bottom: 0;
@@ -163,8 +163,10 @@
     }
   }
   &__comment-subheading {
+    @include fontBold;
     padding-bottom: 1rem;
     padding-left: 2rem;
+
     @include media-tablet {
       border-top: none;
     }
@@ -225,6 +227,10 @@
       justify-content: space-evenly;
       width: 100%;
     }
+  }
+  &__comments{
+    @include fontRegular;
+    line-height: 1.5rem;
   }
 
   &__comment-wrap {
