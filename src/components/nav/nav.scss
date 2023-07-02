@@ -90,13 +90,9 @@
     border: 2px solid $secondary-mercury;
     background-color: $secondary-alabaster;
     border-radius: 0.3rem;
-    &.error {
-      outline-color:#D22D2D; 
-    }
-    &:focus{
+    &:focus {
       outline-color: $primary-blue;
     }
-    
 
     @include media-tablet {
       height: 2.8rem;
@@ -113,7 +109,6 @@
         font-size: 0.9rem;
         color: $primary-black;
       }
-  
     }
   }
 
