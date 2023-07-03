@@ -109,6 +109,10 @@
         font-size: 0.9rem;
         color: $primary-black;
       }
+
+      @include media-desktop {
+        color:$secondary-black;
+      }
     }
   }
 
