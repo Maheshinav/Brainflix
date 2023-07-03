@@ -38,7 +38,7 @@
   padding: 1rem 1rem 1.5rem 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  color: #000;
+  color: #323232;
   border-bottom: 1px solid #e1e1e1;
 }
 @media (min-width: 768px) {
@@ -210,6 +210,8 @@
   }
 }
 .main__comment-subheading {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 700;
   padding-bottom: 1rem;
   padding-left: 2rem;
 }
@@ -293,6 +295,11 @@
     justify-content: space-evenly;
     width: 100%;
   }
+}
+.main__comments {
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 .main__comment-wrap {
   width: 85%;

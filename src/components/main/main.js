@@ -1,5 +1,6 @@
 import view_icon from "../../assets/images/views.svg";
 import like_icon from "../../assets/images/likes.svg";
+
 import List from "../list/List"
 import "./main.css"
 
@@ -7,6 +8,7 @@ const Main = (props) => {
     const { videos, videoDetails } = props;
     return (
         <div>
+
             <div key={videoDetails.id}>
                 <video className="main__video-player
                 " controls poster ={videoDetails.image}>
@@ -64,7 +66,7 @@ const Main = (props) => {
                                                 <p className="main__video-stats">{new Date(comment.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
 
                                             </div>
-                                            <p>{comment.comment}</p>
+                                            <p class="main__comments">{comment.comment}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -74,6 +76,7 @@ const Main = (props) => {
 
                     <div className="main__video-list-align">
                         <List videoList={videos}  />
+
                     </div>
                 </div>
             </div>
