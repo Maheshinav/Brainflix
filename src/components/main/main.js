@@ -1,62 +1,46 @@
-import React, { useState, useEffect } from "react";
 import view_icon from "../../assets/images/views.svg";
 import like_icon from "../../assets/images/likes.svg";
-import List from "../list/List";
+
+import List from "../list/List"
 import "./main.css"
 
 const Main = (props) => {
-    const videoData = props.videoData;
-    const [selectedVideo, setSelectedVideo] = useState(videoData[0]);
-    const [videoList, setVideoList] = useState(videoData.filter((video) => video.id !== selectedVideo.id));
-
-    useEffect(() => {
-        setVideoList(videoData.filter((video) => video.id !== selectedVideo.id));
-    }, [selectedVideo, videoData]);
-
-    const handleImageClick = (videoId) => {
-        const updatedList = videoList.filter((video) => video.id !== videoId);
-        const selectedVideo = videoList.find((video) => video.id === videoId);
-        setSelectedVideo(selectedVideo);
-        setVideoList(updatedList);
-    };
-
-    const handleListUpdate = (updatedList) => {
-        setVideoList(updatedList);
-    };
+    const { videos, videoDetails } = props;
     return (
         <div>
-            <div key={selectedVideo.id}>
+
+            <div key={videoDetails.id}>
                 <video className="main__video-player
-                " controls poster ={selectedVideo.image}>
-                    <source src={selectedVideo.video} type="video/mp4" />
+                " controls poster ={videoDetails.image}>
+                    <source src={videoDetails.video} type="video/mp4" />
                 </video>
                 <div className="main__video-side-list">
                     <div>
                         <div>
-                            <h1 className="main__video-heading">{selectedVideo.title}</h1>
+                            <h1 className="main__video-heading">{videoDetails.title}</h1>
                         </div>
                         <div className="main__video-details">
                             <div className="main__video-details-tablet">
-                                <p className="main__video-channel">By {selectedVideo.channel}</p>
-                                <p className="main__video-stats main__video-date-align">{new Date(selectedVideo.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
+                                <p className="main__video-channel">By {videoDetails.channel}</p>
+                                <p className="main__video-stats main__video-date-align">{new Date(videoDetails.timestamp).toLocaleDateString('en-US', { year: '2-digit', month: '2-digit', day: '2-digit' })}</p>
                             </div>
                             <div className="main__icon-tablet">
                                 <div className="main__icon">
                                     <img src={view_icon} className="main__views-icon" alt="views-icon" />
-                                    <p className="main__video-stats">{selectedVideo.views}</p>
+                                    <p className="main__video-stats">{videoDetails.views}</p>
                                 </div>
                                 <div className="main__icon">
                                     <img src={like_icon} className="main__likes-icon" alt="likes-icon" />
-                                    <p className="main__video-stats">{selectedVideo.likes}</p>
+                                    <p className="main__video-stats">{videoDetails.likes}</p>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <p className="main__video-description">{selectedVideo.description}</p>
+                            <p className="main__video-description">{videoDetails.description}</p>
                         </div>
                         <div>
-                            <h3 className="main__comment-subheading">{selectedVideo.comments.length} Comments</h3>
+                            <h3 className="main__comment-subheading">{videoDetails.comments.length} Comments</h3>
                         </div>
                         <div className="main__comment-secton">
                             <div className="main__comment-new">
@@ -72,7 +56,7 @@ const Main = (props) => {
 
                                 </div>
                             </div>
-                            {selectedVideo.comments && selectedVideo.comments.map((comment) => (
+                            {videoDetails.comments && videoDetails.comments.map((comment) => (
                                 <div key={comment.id}>
                                     <div className="main__loaded-comment-wrap">
                                         <div className="main__display-empty-photo "></div>
@@ -91,12 +75,13 @@ const Main = (props) => {
                     </div>
 
                     <div className="main__video-list-align">
-                        <List videoList={videoList} onImageClick={handleImageClick} updateList={handleListUpdate} />
+                        <List videoList={videos}  />
+
                     </div>
                 </div>
             </div>
         </div>
     );
+                            
 };
-
 export default Main;
