@@ -47,12 +47,10 @@ const Upload = () => {
                         </div>
                         <div className="upload__button-wrap-tablet">
                             <div className="upload__button-container-tablet">
-                                    <button className="upload__video-button">
-                                        Publish
-                                    </button>
-                                
+                                <button className="upload__video-button">
+                                    Publish
+                                </button>
                             </div>
-
                             <div className="upload__button-container-tablet">
                                 <button className="upload__video-cancel-button">
                                     Cancel

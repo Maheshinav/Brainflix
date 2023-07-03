@@ -41,8 +41,8 @@
   line-height: 0;
 }
 .list__contaianer {
-  margin-right: 1rem;
-  margin-left: 1rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
 }
 .list__video-wrapper {
   display: flex;

@@ -11,7 +11,7 @@ const Main = (props) => {
 
             <div key={videoDetails.id}>
                 <video className="main__video-player
-                " controls poster ={videoDetails.image}>
+                " controls poster={videoDetails.image}>
                     <source src={videoDetails.video} type="video/mp4" />
                 </video>
                 <div className="main__video-side-list">
@@ -75,13 +75,13 @@ const Main = (props) => {
                     </div>
 
                     <div className="main__video-list-align">
-                        <List videoList={videos}  />
+                        <List videoList={videos} />
 
                     </div>
                 </div>
             </div>
         </div>
     );
-                            
+
 };
 export default Main;

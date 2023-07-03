@@ -16,8 +16,8 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/video/:id" element={<VideoDetails/>} />
-          <Route path ="/upload" element={<UploadPage/>}/>
+          <Route path="/video/:id" element={<VideoDetails />} />
+          <Route path="/upload" element={<UploadPage />} />
         </Routes>
       </div>
     </BrowserRouter>

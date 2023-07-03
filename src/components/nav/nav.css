@@ -173,6 +173,9 @@
   border-radius: 0.25rem;
   border-style: none;
 }
+.header__upload-button:hover {
+  background-color: #0065ad;
+}
 .header__upload-button--link {
   font-family: "Avenir Next", Arial, sans-serif;
   font-weight: 700;

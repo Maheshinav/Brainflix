@@ -11,7 +11,7 @@ const List = (props) => {
   }, [props.videoList]);
 
   return (
-    <div className="list__container">
+    <div className="list__contaianer">
       <div>
         <h3 className="list__header">Next Videos</h3>
       </div>

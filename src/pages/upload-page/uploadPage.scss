@@ -9,14 +9,12 @@
     font-size: 2.2rem;
 
     @include media-tablet {
-    font-size: 2.4rem;
-  }
+      font-size: 2.4rem;
+    }
 
-  
-  @include media-tablet {
-    font-size: 2.1rem;
-  }
-
+    @include media-tablet {
+      font-size: 2.1rem;
+    }
   }
   &__video-details {
     @include media-desktop {
@@ -44,9 +42,9 @@
     @include media-tablet {
       width: 45%;
     }
-    @include media-desktop{
+    @include media-desktop {
       height: 33vh;
-      width:100%;
+      width: 100%;
     }
   }
 
@@ -74,8 +72,8 @@
     &:focus {
       outline-color: $primary-blue;
     }
-    @include media-desktop{
-      height:3rem;
+    @include media-desktop {
+      height: 3rem;
     }
 
     &::placeholder {
@@ -83,7 +81,7 @@
       color: $primary-black;
       font-size: 1.2rem;
 
-      @include media-desktop{
+      @include media-desktop {
         font-size: 1rem;
       }
     }
@@ -98,8 +96,8 @@
     border: 0.15rem solid $secondary-mercury;
     background-color: $secondary-alabaster;
 
-    @include media-desktop{
-      height:8rem;
+    @include media-desktop {
+      height: 8rem;
     }
     &:focus {
       outline-color: $primary-blue;
@@ -111,7 +109,7 @@
       font-size: 1.2rem;
       padding-left: 0.2rem;
 
-      @include media-desktop{
+      @include media-desktop {
         font-size: 1rem;
       }
     }
@@ -133,6 +131,10 @@
     color: $primary-white;
     line-height: 1rem;
     @include fontBold;
+
+    &:hover {
+      background-color: $secondary-blue;
+    }
   }
 
   &__video-cancel-button {
@@ -146,6 +148,9 @@
     font-size: 1rem;
     color: $primary-blue;
     text-transform: uppercase;
+    &:hover {
+      color: $secondary-blue;
+    }
   }
   &__button-wrap-tablet {
     @include media-tablet {
@@ -155,7 +160,6 @@
       justify-content: flex-start;
       align-items: center;
       flex-direction: row-reverse;
-
     }
   }
 
@@ -165,13 +169,12 @@
     }
   }
   &__container-desktop {
-    @include media-desktop{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding-bottom: 1.5rem;
+    @include media-desktop {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 1.5rem;
     }
-   
   }
 
   &__button-container-tablet {

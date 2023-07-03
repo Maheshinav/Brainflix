@@ -111,7 +111,7 @@
       }
 
       @include media-desktop {
-        color:$secondary-black;
+        color: $secondary-black;
       }
     }
   }
@@ -146,14 +146,17 @@
     margin-top: 1rem;
     border-radius: 0.25rem;
     border-style: none;
+    &:hover {
+      background-color: $secondary-blue;
+    }
 
-    &--link{
-        @include fontBold;
-        color: $primary-white;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        line-height: 1rem;
-        text-decoration: none;  
+    &--link {
+      @include fontBold;
+      color: $primary-white;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      line-height: 1rem;
+      text-decoration: none;
     }
 
     @include media-tablet {

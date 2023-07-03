@@ -166,6 +166,9 @@
   font-family: "Avenir Next", Arial, sans-serif;
   font-weight: 700;
 }
+.upload__video-button:hover {
+  background-color: #0065ad;
+}
 .upload__video-cancel-button {
   margin: 1.2rem 1rem 0 0;
   background-color: white;
@@ -178,6 +181,9 @@
   font-size: 1rem;
   color: #0095ff;
   text-transform: uppercase;
+}
+.upload__video-cancel-button:hover {
+  color: #0065ad;
 }
 @media (min-width: 768px) {
   .upload__button-wrap-tablet {
