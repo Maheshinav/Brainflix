@@ -5,7 +5,20 @@
 .main {
   &__video-player {
     width: 100%;
-    padding-top: 1rem;
+    margin-top: 1rem;
+    background-color: $secondary-black;
+
+    @include media-desktop{
+      padding: 0 10rem;
+    }
+
+    @include media-tablet{
+      padding: 0 4rem;
+    }
+
+    @include media-desktop{
+      padding: 0 6rem;
+    }
   }
   &__video-heading {
     @include fontBold;

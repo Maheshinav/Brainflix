@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./data/video-details.json";
 import "./data/videos.json";
-import Nav from "./components/nav/Nav";
+import Nav from "./components/nav/nav";
 import HomePage from "./pages/home-page/HomePage";
 import VideoDetails from "./pages/video -details/VideoDetails";
 import UploadPage from "./pages/upload-page/UploadPage";

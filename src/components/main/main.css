@@ -12,7 +12,23 @@
 }
 .main__video-player {
   width: 100%;
-  padding-top: 1rem;
+  margin-top: 1rem;
+  background-color: #000;
+}
+@media (min-width: 1280px) {
+  .main__video-player {
+    padding: 0 10rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__video-player {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__video-player {
+    padding: 0 6rem;
+  }
 }
 .main__video-heading {
   font-family: "Avenir Next", Arial, sans-serif;
