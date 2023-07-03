@@ -76,7 +76,6 @@ const Main = (props) => {
 
                     <div className="main__video-list-align">
                         <List videoList={videos} />
-
                     </div>
                 </div>
             </div>
