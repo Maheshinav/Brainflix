@@ -14,9 +14,8 @@ const Upload = () => {
       return;
     }
 
-    // Form submission successful
     alert("Video uploaded successfully!");
-    window.location.href = "/"; // Redirect to the home page
+    window.location.href = "/"; 
   };
 
   return (
