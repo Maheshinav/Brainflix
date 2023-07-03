@@ -1,4 +1,5 @@
 import "./nav.css";
+import {Link} from 'react-router-dom';
 import logo from "../../assets/images/BrainFlix-logo.svg";
 
 
@@ -9,7 +10,10 @@ const Nav = () => {
         <header className="header">
             <section className="header__wrapper">
                 <div className="header__logo-container">
-                    <img className="header__logo" src={logo} alt="BrainFlix-Logo" />
+                      <Link to="/"> 
+                        <img className="header__logo" src={logo} alt="logo -BrainFlix">
+                        </img>
+                        </Link>
                 </div>
                 <div className="header__content-tablet">
                     <div className="header__controls">
@@ -19,8 +23,7 @@ const Nav = () => {
                         <div className="header__avatar">
                         </div>
                     </div>
-                    <button className="header__upload-button"> Upload
-                    </button>
+                    <button className="header__upload-button"><Link className="header__upload-button--link" to= "/upload" >upload</Link></button>
                     <div className="header__avatar-tablet">
                     </div>
                 </div>

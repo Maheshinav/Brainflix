@@ -90,6 +90,9 @@
     border: 2px solid $secondary-mercury;
     background-color: $secondary-alabaster;
     border-radius: 0.3rem;
+    &:focus {
+      outline-color: $primary-blue;
+    }
 
     @include media-tablet {
       height: 2.8rem;
@@ -129,11 +132,6 @@
   }
 
   &__upload-button {
-    @include fontRegular;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    color: $primary-white;
-    line-height: 1rem;
     background-image: url(../../assets/images/upload.svg);
     background-color: $primary-blue;
     background-repeat: no-repeat;
@@ -144,6 +142,15 @@
     margin-top: 1rem;
     border-radius: 0.25rem;
     border-style: none;
+
+    &--link{
+        @include fontBold;
+        color: $primary-white;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        line-height: 1rem;
+        text-decoration: none;  
+    }
 
     @include media-tablet {
       width: 11rem;

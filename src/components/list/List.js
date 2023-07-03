@@ -1,19 +1,17 @@
-import "./list.css";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import './list.css';
 
 const List = (props) => {
-  const videoList = props.videoList;
 
-  const imageClick = (videoId) => {
-    props.onImageClick(videoId);
-  };
+  const [videoList, setVideoList] = useState([]);
 
-  const removeVideo = (videoId) => {
-    const updatedList = videoList.filter((video) => video.id !== videoId);
-    props.updateList(updatedList);
-  };
+  useEffect(() => {
+    setVideoList(props.videoList);
+  }, [props.videoList]);
 
   return (
-    <div className="list__contaianer">
+    <div className="list__container">
       <div>
         <h3 className="list__header">Next Videos</h3>
       </div>
@@ -21,15 +19,13 @@ const List = (props) => {
         <div key={video.id}>
           <div className="list__video-wrapper">
             <div>
-              <img
-                onClick={() => {
-                  imageClick(video.id);
-                  removeVideo(video.id);
-                }}
-                src={video.image}
-                alt="video-list-images"
-                className="list__image"
-              />
+              <Link to={`/video/${video.id}`}>
+                <img
+                  src={video.image}
+                  alt="video-list-images"
+                  className="list__image"
+                />
+              </Link>
             </div>
             <div>
               <h3 className="list__details-tablet">{video.title}</h3>
