@@ -14,7 +14,7 @@ const HomePage = () => {
 
         if (response.data.length > 0) {
           const id = response.data[0].id;
-          
+
           const videoDetailsResponse = await axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=2b1296cc-5054-4a8d-8059-46193c584ab8`);
           setVideoDetails(videoDetailsResponse.data);
           setVideos(videos => videos.filter(video => video.id !== id));
