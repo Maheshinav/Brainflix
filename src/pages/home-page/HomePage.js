@@ -10,7 +10,7 @@ const HomePage = () => {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					"https://project-2-api.herokuapp.com/videos?api_key=e1d5e63f-970d-4246-a620-60525cbc2159"
+					"http://localhost:8080/videos"
 				);
 				setVideos(response.data);
 
@@ -18,7 +18,7 @@ const HomePage = () => {
 					const id = response.data[0].id;
 
 					const videoDetailsResponse = await axios.get(
-						`https://project-2-api.herokuapp.com/videos/${id}?api_key=e1d5e63f-970d-4246-a620-60525cbc2159`
+						`http://localhost:8080/videos/${id}`
 					);
 					setVideoDetails(videoDetailsResponse.data);
 					setVideos((videos) => videos.filter((video) => video.id !== id));

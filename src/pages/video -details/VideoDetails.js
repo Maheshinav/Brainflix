@@ -13,13 +13,13 @@ const VideoPage = () => {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					"https://project-2-api.herokuapp.com/videos?api_key=2b1296cc-5054-4a8d-8059-46193c584ab8"
+					"http://localhost:8080/videos"
 				);
 				setVideos(response.data);
 
 				if (response.data.length > 0) {
 					const videoDetailsResponse = await axios.get(
-						`https://project-2-api.herokuapp.com/videos/${id}?api_key=2b1296cc-5054-4a8d-8059-46193c584ab8`
+						`http://localhost:8080/videos/${id}`
 					);
 					setVideoDetails(videoDetailsResponse.data);
 				} else {
