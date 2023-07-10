@@ -59,9 +59,16 @@
     padding: 0;
   }
 }
+.main__video-details-alignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 6rem;
+}
 @media (min-width: 768px) {
-  .main__video-details-tablet {
+  .main__video-details-alignment {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     width: 16rem;

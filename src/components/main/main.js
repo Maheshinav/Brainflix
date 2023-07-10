@@ -28,7 +28,7 @@ const Main = ({ videos, videoDetails }) => {
 							<h1 className="main__video-heading">{title}</h1>
 						</header>
 						<div className="main__video-details">
-							<div className="main__video-details-tablet">
+							<div className="main__video-details-alignment">
 								<p className="main__video-channel">By {channel}</p>
 								<time
 									className="main__video-stats main__video-date-align"

@@ -45,12 +45,18 @@
 			padding: 0;
 		}
 	}
-	&__video-details-tablet {
+	&__video-details-alignment{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 6rem;
 		@include media-tablet {
 			display: flex;
+			flex-direction: row;
 			align-items: center;
 			justify-content: space-evenly;
 			width: 16rem;
+			
 		}
 	}
 
