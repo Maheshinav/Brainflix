@@ -11,7 +11,13 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
 }
 .main__video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 1rem;
   background-color: #000;
 }
@@ -73,6 +79,11 @@
     justify-content: space-evenly;
     width: 16rem;
   }
+}
+.main__video-player-aspect-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-bottom: 1rem;
 }
 .main__views-icon {
   height: 2rem;
@@ -227,6 +238,7 @@
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  margin-right: -1rem;
 }
 @media (min-width: 768px) {
   .main__comment-new {
@@ -321,6 +333,9 @@
   width: 100%;
   margin-top: 1rem;
 }
+.main__button:hover {
+  background-color: #0065ad;
+}
 @media (min-width: 768px) {
   .main__button {
     height: 3rem;
@@ -358,4 +373,7 @@
   .main__video-list-align {
     border-left: 1px solid #e1e1e1;
   }
+}
+.main__content alignment {
+  margin-right: 1rem;
 }/*# sourceMappingURL=main.css.map */

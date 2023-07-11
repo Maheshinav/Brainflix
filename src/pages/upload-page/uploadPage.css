@@ -212,4 +212,7 @@
   .upload__button-container-tablet {
     width: 14rem;
   }
+}
+.upload__placeholder-value {
+  display: none;
 }/*# sourceMappingURL=uploadPage.css.map */

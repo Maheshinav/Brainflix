@@ -19,11 +19,14 @@ const Main = ({ videos, videoDetails }) => {
 	return (
 		<main>
 			<article key={videoDetails.id}>
-				<video className="main__video-player" controls poster={image}>
-					<source src={video} type="video/mp4" />
-				</video>
+				<div className="main__video-player-aspect-ratio">
+					<video className="main__video-player" controls poster={image}>
+						<source src={video} type="video/mp4" />
+					</video>
+				</div>
+
 				<div className="main__video-side-list">
-					<div>
+					<div className="main__content alignment">
 						<header>
 							<h1 className="main__video-heading">{title}</h1>
 						</header>
