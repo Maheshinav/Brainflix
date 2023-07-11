@@ -238,7 +238,11 @@
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  margin-right: -1rem;
+}
+@media (min-width: 1280px) {
+  .main__comment-new {
+    margin-right: -1rem;
+  }
 }
 @media (min-width: 768px) {
   .main__comment-new {
