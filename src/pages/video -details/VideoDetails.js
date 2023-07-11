@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Main from "../../components/main/Main";
+import Main from "../../components/main/main";
 import axios from "axios";
 
 const VideoPage = () => {
